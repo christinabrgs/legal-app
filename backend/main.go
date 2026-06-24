@@ -19,6 +19,7 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// library for middleware?
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", getRoot)
 	mux.HandleFunc("/hello", getHello)

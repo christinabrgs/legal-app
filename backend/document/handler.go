@@ -2,6 +2,7 @@ package document
 
 import (
 	"database/sql"
+	"fmt"
 	"net/http"
 )
 
@@ -9,18 +10,31 @@ type session struct {
 	sql.DB
 }
 
+type State string
+
+type DocumentType string
+
 type Document struct {
-	ID    int
-	Name  string
-	Type  string
-	State string
+	ID      int
+	Name    string
+	DocType DocumentType
+	State   State
 }
 
-func (d Document) getDocument(w http.ResponseWriter, r *http.Request) {
+type DocumentHandler interface {
+	GetDocument(http.ResponseWriter, http.Request)
+	UpdateDocument(http.ResponseWriter, http.Request)
+	DeleteDocument(http.ResponseWriter, http.Request)
 }
 
-func (d Document) updateDocument(w http.ResponseWriter, r *http.Request) {
+func (d Document) GetDocument(w http.ResponseWriter, r *http.Request) {
+	fmt.Print("unimplemented")
 }
 
-func (d Document) deleteDocument(w http.ResponseWriter, r *http.Request) {
+func (d Document) UpdateDocument(w http.ResponseWriter, r *http.Request) {
+	fmt.Print("unimplemented")
+}
+
+func (d Document) DeleteDocument(w http.ResponseWriter, r *http.Request) {
+	fmt.Print("unimplemented")
 }

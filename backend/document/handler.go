@@ -28,13 +28,13 @@ type DocumentHandler interface {
 }
 
 func (d Document) GetDocument(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("unimplemented")
+	fmt.Print("not implemented")
 }
 
 func (d Document) UpdateDocument(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("unimplemented")
+	fmt.Print("not implemented")
 }
 
 func (d Document) DeleteDocument(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("unimplemented")
+	fmt.Print("not implemented")
 }
